@@ -5,18 +5,18 @@
  * @param {*} obj  数据  对象
  *
  */
-  function renderList(index=0,disabled=false,obj=null){
-    let str = ``;
-    const slot = document.getElementById('slot'),
-      type = document.getElementById('type'),
-      inputHtml = document.getElementsByClassName('form')[0].getElementsByTagName("input"),
-      selectHtml = document.getElementsByClassName('form')[0].getElementsByTagName("select"),
-      textArea = document.getElementsByTagName('textarea'),
-      newline = obj ? obj.newline : {};//判断是否有值，如果有值根据接口数据返回obj.newline
+function renderList(index = 0, disabled = false, obj = null) {
+  let str = ``;
+  const slot = document.getElementById('slot'),
+    type = document.getElementById('type'),
+    inputHtml = document.getElementsByClassName('form')[0].getElementsByTagName("input"),
+    selectHtml = document.getElementsByClassName('form')[0].getElementsByTagName("select"),
+    textArea = document.getElementsByTagName('textarea'),
+    newline = obj ? obj.newline : {}; //判断是否有值，如果有值根据接口数据返回obj.newline
 
 
   // 工单名
-    const workOrderName = `
+  const workOrderName = `
   <li class="border-bottom">
     <label class="label">工单名称</label>
     <input class="input" type="text" placeholder="请输入工单" value=${newline['name']?? ''}>
@@ -65,16 +65,16 @@
   <li class="split-bar">
     客户信息&nbsp;<i class="iconfont icon-minus-circle"></i>
   </li>
-  ` 
+  `
   // 客户姓名
-  const customerName=`
+  const customerName = `
   <li class="border-bottom">
     <label class="label">客户姓名</label>
     <input class="input" type="text" placeholder="必填" value=${newline['clientName']??''}>
   </li>
   `
   // 顾客电话
-  const customerTel=`
+  const customerTel = `
   <li class="border-bottom">
     <label class="label">客户电话</label>
     <input class="input" type="text" placeholder="必填" value=${newline['clientMobile']??''}>
@@ -145,7 +145,7 @@
     <label class="label">集团等级</label>
    <input class="input" type="text" placeholder="选填" value=${newline['groupLevel']??''}>
   </li>
-  ` 
+  `
   // 集团地址
   const groupAddress = `
   <li class="border-bottom">
@@ -210,12 +210,12 @@
   </li>
   `
   // Z端地址
-  const ZAddress =`
+  const ZAddress = `
   <li class="border-bottom">
     <label class="label">Z端地址</label>
     <input class="input" type="text" placeholder="选填" value=${newline['zAddr']??''}>
   </li>
-  ` 
+  `
   // Z端联系人
   const ZContactsMan = `
   <li class="border-bottom">
@@ -224,14 +224,14 @@
   </li> 
   `
   // Z端联系方式
-   const ZContactsInfo = `
+  const ZContactsInfo = `
    <li class="border-bottom">
     <label class="label">Z端联系方式</label>
     <input class="input" type="text" placeholder="选填" value=${newline['zMobile']??''}>
   </li>
    `
   //  A端信息 -- 分割栏
-    const ASplitBar = `
+  const ASplitBar = `
     <li class="split-bar">A端信息&nbsp;<i class="iconfont icon-info"></i></li>
   `
   // A端地址
@@ -242,7 +242,7 @@
   </li>
   `
   // A端联系人
-  const AContactsMan= `
+  const AContactsMan = `
   <li class="border-bottom">
   <label class="label">A端联系人</label>
   <input class="input" type="text" placeholder="选填" value=${newline['aName']??''}>
@@ -281,7 +281,7 @@
   </li>
   `
   // 物业场景现象
-  const propertyScene =`
+  const propertyScene = `
   <li class="border-bottom">
   <label class="label">物业场景现象</label>
   <input class="input" type="text" placeholder="选填" value=${newline['propScenario']??''}>
@@ -295,7 +295,7 @@
   </li>
   `
   // 数量统计 -- 分割栏
-  const  Statistics= `
+  const Statistics = `
   <li class="split-bar">数量统计&nbsp;<i class="iconfont icon-tongji"></i></li>
   `
   // 家庭住户总数
@@ -313,7 +313,7 @@
   </li>
   `
   // 政府机构数
-  const  governmentNumber = `
+  const governmentNumber = `
   <li class="border-bottom">
   <label class="label">政府机构数</label>
   <input class="input" type="text" placeholder="选填"  value=${newline['govLine']??''}>
@@ -377,10 +377,10 @@
     <button>提交</button>
   </div>
   `
-    switch(index) {
-      // 互联网
-      case 0:
-       str = `
+  switch (index) {
+    // 互联网
+    case 0:
+      str = `
       <ul class="internet">
       ${workOrderName}
       ${isProject}
@@ -404,9 +404,9 @@
       ${remarks}
       </ul>
       `;
-         break;
+      break;
       //  语音电路
-      case 1:
+    case 1:
       str = `
       <ul class="voice">
       ${workOrderName}
@@ -439,10 +439,10 @@
       ${remarks}
       </ul>
       `
-         break;
+      break;
       //  互联网+IMS
-      case 2:
-        str = `
+    case 2:
+      str = `
         <ul class="internetIMS">
         ${workOrderName}
         ${isProject}
@@ -468,10 +468,10 @@
         ${remarks}
         </ul>
         `;
-         break; 
+      break;
       //  IMS    
-      case 3:
-        str = `
+    case 3:
+      str = `
         <ul class="IMS">
         ${workOrderName}
         ${isProject}
@@ -495,10 +495,10 @@
         ${remarks}
         </ul>
         `;
-        break; 
+      break;
       // 预覆盖 
-      case 4:
-        str = `
+    case 4:
+      str = `
         <ul class="recapping">
         ${workOrderName}
         ${isProject}
@@ -537,10 +537,10 @@
         ${remarks}
         </ul>
         `;
-        break;  
+      break;
       // 企业宽带
-      default:
-        str = `
+    default:
+      str = `
         <ul class="co-broadband">
         ${workOrderName}
         ${isProject}
@@ -560,28 +560,28 @@
         ${customerAddress}
         ${remarks}
         </ul>
-        `;  
-    } 
-    
-    slot.innerHTML = str + submitBtn;// 添加按钮并插入元素
-    // 将html为数组转为数组并循环添加selected属性
-    Array.from(type).forEach((item,i) => {
-      if(i === index){
-        item.setAttribute("selected","true");
-      }
-    });
-
-    // 设置input textarea select 为disabled ,  隐藏button 
-    if(disabled){
-      $('.submit').hide();
-      Array.from(inputHtml).forEach((item) => {
-        item.setAttribute("disabled","true");
-      });
-      Array.from(selectHtml).forEach((item) => {
-        item.setAttribute("disabled","true");
-      });
-      Array.from(textArea).forEach((item) => {
-        item.setAttribute("disabled","true");
-      });
-    }  
+        `;
   }
+
+  slot.innerHTML = str + submitBtn; // 添加按钮并插入元素
+  // 将html为数组转为数组并循环添加selected属性
+  Array.from(type).forEach((item, i) => {
+    if (i === index) {
+      item.setAttribute("selected", "true");
+    }
+  });
+
+  // 设置input textarea select 为disabled ,  隐藏button 
+  if (disabled) {
+    $('.submit').hide();
+    Array.from(inputHtml).forEach((item) => {
+      item.setAttribute("disabled", "true");
+    });
+    Array.from(selectHtml).forEach((item) => {
+      item.setAttribute("disabled", "true");
+    });
+    Array.from(textArea).forEach((item) => {
+      item.setAttribute("disabled", "true");
+    });
+  }
+}
