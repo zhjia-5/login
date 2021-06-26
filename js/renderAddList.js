@@ -6,6 +6,7 @@
  *
  */
 function renderList(index = 0, disabled = false, obj = null) {
+  alert("111")
   let str = ``;
   const slot = document.getElementById('slot'),
     type = document.getElementById('type'),
@@ -14,7 +15,7 @@ function renderList(index = 0, disabled = false, obj = null) {
     textArea = document.getElementsByTagName('textarea'),
     newline = obj ? obj.newline : {}; //判断是否有值，如果有值根据接口数据返回obj.newline
 
-
+    alert("222")
   // 工单名
   const workOrderName = `
   <li class="border-bottom">

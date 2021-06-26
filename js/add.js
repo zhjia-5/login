@@ -16,12 +16,10 @@
     alert("666")
   }
   async function init(id) {
-    alert("777")
     // 如果id为0表示新增页；如果大于0表示详情页，需要球请求数据
     isLoading = true; //开始请求数据的时候设置为true
     svgShow(isLoading); //控制svg图显示与否
     await delay(2000);
-    alert("888")
     return new Promise((resolve, reject) => {
       $.post('http://192.168.31.248:8081/fcgagents/manager/newline/show.do', {
           id
