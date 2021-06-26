@@ -1,17 +1,17 @@
 (async function ($) {
-  alert("111")
+    alert("111")
   let isLoading = false; //作为判断是否正在加载中的标记
-  alert("222")
+    alert("222")
   const id = +getParam("id"); // +转为Number
-  alert("333")
+    alert("333")
   // 大于0表示详情页 否则是添加页
   if (id > 0) {
-  alert("444")
+    alert("444")
     const res = await init(id)
     console.log(res);
     renderList(0, true, res)
   } else {
-  alert("555")
+    alert("555")
     renderList(0, false, null);
     alert("666")
   }
@@ -39,7 +39,7 @@
   // 切换类型，重新渲染
   $('#type').on('change', (e) => {
     const val = e.target.value;
-    renderList(+val, false); //将val转为字符串
+    renderList(+val, false,null); //将val转为字符串
   })
   // 点击 < 回退上次链接
   $(".left").on('click', () => {
