@@ -34,7 +34,7 @@
 			psdErr();
 		} else {
 			$('.login-btn').attr('disabled', true);
-			$('.login-btn').val("登陆中...");
+			$('.login-btn').html("登陆中...");
 			const pro = login(type, username, password);
 			pro.then(data => {
 				if (data.success) {
