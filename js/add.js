@@ -7,9 +7,12 @@
     console.log(res);
     renderAdd(0, true, res);
   } else {
-    renderAdd(0, false, null);
     alert("111")
+    renderAdd(0, false, null);
+    alert("222")
   }
+
+  // 初始化函数
   async function init(id) {
     // 如果id为0表示新增页；如果大于0表示详情页，需要球请求数据
     isLoading = true; //开始请求数据的时候设置为true
