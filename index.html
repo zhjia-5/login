@@ -4,45 +4,61 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_2625117_83pz1aykime.css">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="stylesheet" href="./css/login.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2625117_drv2b37o7nk.css">
   <link rel="stylesheet" href="./css/public.css">
-  <title>登录</title>  
+  <link rel="stylesheet" href="./css/add.css">
+  <title>添加工单</title>
 </head>
-<!--  -->
+
 <body>
-  <div class="login">
-    <div class="login-logo"><img src="./image/loginbar.png"></div>
+  <div class="main">
+    <!-- 导航栏 -->
+    <nav>
+      <div class='left'>
+        <a href="#"> <i class="iconfont icon-ico_leftarrow"></i>&nbsp;添加专项工单</a>
+      </div>
+      <div class="right">
+        <a href="#"><i class="iconfont icon-xingmingyonghumingnicheng"></i></a>
+        <a href="#"><i class="iconfont icon-xinxi" style="font-size: 1.4rem;"></i></a>
+        <a href="#"><i class="iconfont icon-icon-"></i></a>
+      </div>
+    </nav>
+    <!-- 表单区域 -->
     <div class="form">
-      <div class="gongsi">
-        <i class="iconfont icon-gongsi"></i>
-        <select class="select">
-          <option value="0">移动公司</option>
-          <option value="1">设计单位</option>
+      <!-- 类型选择框 -->
+      <div class="typeSelect border-bottom">
+        <label class="label">类型</label>
+        <select id="type"  class="select" >
+          <option value="0">互联网</option>
+          <option value="1">语音电路</option>
+          <option value="2">互联网+IMS</option>
+          <option value="3">IMS</option>
+          <option value="4">预覆盖</option>
+          <option value="5">企业宽带</option>
         </select>
       </div>
-      <div class="input"><i class="iconfont icon-xingmingyonghumingnicheng"></i>
-        <input class="username" type="text" placeholder="请输入用户名">
-      </div>
-      <span class="uname-err">请输入用户名</span>
-
-      <div class="input"><i class="iconfont icon-mimaffffffpx"></i>
-        <input class="password" type="password" placeholder="请输入密码">
-      </div>
-      <span class="psd-err">请输入密码</span>
-      <div class="footer">
-        <input type="checkbox" checked id="remeber">
-        <label for="remeber">记住密码</label>
-        <button type="submit" class="login-btn">登 录</button>
-      </div>
+     <!-- svg 加载图 -->
+    <div class="svg" style="display: none; text-align: center; margin-top: 1rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve">
+        <path fill="#409eff" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z" transform="rotate(275.098 25 25)">
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur=".8s" repeatCount="indefinite"></animateTransform>
+        </path>
+      </svg>
     </div>
+      <!-- 存放ul列表的插槽 -->
+      <div id="slot"></div>
+    </div>
+    <!-- 提交按钮 -->
+    <!-- <div class="submit">
+      <button>提交</button>
+    </div> -->
   </div>
-  <script src="./js/cookie.js"></script>
+  <script src="./js/delay.js"></script>
   <script src="./js/zepto.min.js"></script>
-  <script src="./js/login.js"></script>
+  <script src="./js/renderAddList.js"></script>
+  <script src="./js/add.js"></script>
+  
 </body>
 
-</html>  
+</html>
