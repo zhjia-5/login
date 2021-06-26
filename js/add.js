@@ -1,4 +1,3 @@
-alert("1111")
 (async function ($) {
   alert("2222")
   let isLoading = false; //作为判断是否正在加载中的标记
