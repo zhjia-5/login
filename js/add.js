@@ -8,8 +8,7 @@
     renderAdd(0, true, res);
   } else {
     alert("111")
-    // renderAdd(0, false, null);
-    renderAdd();
+    renderAdd(0, false, null);
     alert("222")
   }
 
