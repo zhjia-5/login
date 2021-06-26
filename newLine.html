@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>newLine</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2625117_bfpxzy618ro.css">
+  <link rel="stylesheet" href="./css/public.css">
+  <link rel="stylesheet" href="./css/newLine.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- 头部搜索区域 -->
+    <div class="head">
+      <div class="search">   
+        <i class="iconfont icon-sousuo"></i>
+        <input class="search-input" type="text" placeholder="请输入工单名...">
+        <i class="iconfont icon-cuowu"></i>
+      </div>
+      <button class="search-btn">搜 索</button>
+      <i class="iconfont icon-jiahao"></i>
+    </div>
+    <!-- 内容列表区 -->
+    <div class="content">
+      <ul class="list">
+      </ul>
+    </div>
+    <!-- 用于显示没有数据 -->
+    <div class="empty">
+      <i class="iconfont icon-kong"></i>
+      <p>无数据</p>
+    </div>
+    <!-- svg 加载图 -->
+    <div class="svg" style="display: none; text-align: center; margin-top: 1rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve">
+        <path fill="#409eff" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z" transform="rotate(275.098 25 25)">
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur=".8s" repeatCount="indefinite"></animateTransform>
+        </path>
+    </svg>
+    </div>
+  </div>
+  <script src="./js/delay.js"></script>
+  <script src="./js/zepto.min.js"></script>
+  <script src="./js/newLine.js"></script>
+</body>
+
+</html>
+
