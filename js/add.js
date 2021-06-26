@@ -1,20 +1,27 @@
 (async function ($) {
-  alert("2222")
+  alert("111")
   let isLoading = false; //作为判断是否正在加载中的标记
+  alert("222")
   const id = +getParam("id"); // +转为Number
+  alert("333")
   // 大于0表示详情页 否则是添加页
   if (id > 0) {
+  alert("444")
     const res = await init(id)
     console.log(res);
     renderList(0, true, res)
   } else {
+  alert("555")
     renderList(0, false, null);
+    alert("666")
   }
   async function init(id) {
+    alert("777")
     // 如果id为0表示新增页；如果大于0表示详情页，需要球请求数据
     isLoading = true; //开始请求数据的时候设置为true
     svgShow(isLoading); //控制svg图显示与否
     await delay(2000);
+    alert("888")
     return new Promise((resolve, reject) => {
       $.post('http://192.168.31.248:8081/fcgagents/manager/newline/show.do', {
           id
