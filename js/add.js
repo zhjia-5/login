@@ -3,13 +3,12 @@
   const id = +getParam("id"); // +转为Number
   // 大于0表示详情页 否则是添加页
   if (id > 0) {
-    const res = await init(id)
+    const res = await init(id);
     console.log(res);
-    renderList(0, true, res)
+    renderAdd(0, true, res);
   } else {
+    renderAdd(0, false, null);
     alert("111")
-    // renderList(0, false, null);
-    alert("222")
   }
   async function init(id) {
     // 如果id为0表示新增页；如果大于0表示详情页，需要球请求数据
@@ -33,7 +32,7 @@
   // 切换类型，重新渲染
   $('#type').on('change', (e) => {
     const val = e.target.value;
-    renderList(+val, false,null); //将val转为字符串
+    renderAdd(+val, false,null); //将val转为字符串
   })
   // 点击 < 回退上次链接
   $(".left").on('click', () => {

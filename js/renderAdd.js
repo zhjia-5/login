@@ -5,8 +5,7 @@
  * @param {*} obj  数据  对象
  *
  */
-function renderList(index = 0, disabled = false, obj = null) {
-  alert("111")
+function renderAdd(index = 0, disabled = false, obj = null) {
   let str = ``;
   const slot = document.getElementById('slot'),
     type = document.getElementById('type'),
