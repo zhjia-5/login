@@ -1,4 +1,6 @@
+alert("1111")
 (async function ($) {
+  alert("2222")
   let isLoading = false; //作为判断是否正在加载中的标记
   const id = +getParam("id"); // +转为Number
   // 大于0表示详情页 否则是添加页
@@ -9,7 +11,6 @@
   } else {
     renderList(0, false, null);
   }
-  alert("12345")
   async function init(id) {
     // 如果id为0表示新增页；如果大于0表示详情页，需要球请求数据
     isLoading = true; //开始请求数据的时候设置为true
