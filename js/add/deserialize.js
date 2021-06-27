@@ -2,7 +2,6 @@
  * 设置表单值
  * @param form          Form表单id或表单jquery DOM对象
  * @param data          json对象，多选时为数组
- * 代码实现参考此开源项目https://github.com/kflorence/jquery-deserialize/
  */
 function deserialize(form, data) {
   var rcheck = /^(?:radio|checkbox)$/i,
