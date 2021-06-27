@@ -1,9 +1,6 @@
 input::-webkit-input-placeholder{
   font-size: .8rem;
 }
-/* .main{
-  padding-bottom: 3rem;
-} */
 nav{
   position: fixed;
   left: 0;
@@ -42,12 +39,12 @@ nav .right a{
 .icon-ico_leftarrow{
   font-size: .8rem;
 }
+/* form表单 */
 .form{
   width: 100%;
   box-sizing: border-box;
   padding-top: 3rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
+
 }
 .form .typeSelect{
   display: flex;

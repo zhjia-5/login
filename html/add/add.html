@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_2625117_drv2b37o7nk.css">
-  <link rel="stylesheet" href="./css/public.css">
-  <link rel="stylesheet" href="./css/add.css">
+  <link rel="stylesheet" href="/css/public/public.css">
+  <link rel="stylesheet" href="/css/add/add.css">
   <title>添加工单</title>
 </head>
 
@@ -16,7 +16,7 @@
     <!-- 导航栏 -->
     <nav>
       <div class='left'>
-        <a href="#"> <i class="iconfont icon-ico_leftarrow"></i>&nbsp;添加专项工单</a>
+        <a href="#"> <i class="iconfont icon-ico_leftarrow"></i>&nbsp;<span class="isAddOrEdit">添加专项工单</span></a>
       </div>
       <div class="right">
         <a href="#"><i class="iconfont icon-xingmingyonghumingnicheng"></i></a>
@@ -25,11 +25,11 @@
       </div>
     </nav>
     <!-- 表单区域 -->
-    <div class="form">
+    <form class="form">  
       <!-- 类型选择框 -->
       <div class="typeSelect border-bottom">
         <label class="label">类型</label>
-        <select id="type" class="select">
+        <select id="type" class="select" name="type">
           <option value="0">互联网</option>
           <option value="1">语音电路</option>
           <option value="2">互联网+IMS</option>
@@ -52,16 +52,18 @@
       </div>
       <!-- 存放ul列表的插槽 -->
       <div id="slot"></div>
-    </div>
-    <!-- 提交按钮 -->
-    <!-- <div class="submit">
-      <button>提交</button>
-    </div> -->
+      <div class="submit">
+        <button>提交</button>
+      </div>
+    </form>
   </div>
-  <script src="./js/zepto.min.js"></script>
-  <script src="./js/delay.js"></script>
-  <script src="./js/renderAdd.js"></script>
-  <script src="./js/add.js"></script>
+  <script src="/js/public/jquery-3.5.1.min.js"></script>
+  <script src="/js/add/deserialize.js"></script>
+  <script src="/js/public/delay.js"></script>
+  <script src="/js/add/renderAdd.js"></script>
+  <script src="/js/add/add.js"></script>
+
+
 
 </body>
 

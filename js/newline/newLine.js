@@ -103,12 +103,12 @@
   // 获取详情页 获取遮罩层div.mask上的data-id值, +id：转为字符串,并将id添加到url中
   $('.items').on('click',(e)=>{
     let id = +e.target.dataset.id;
-    window.location.href= `./add.html?id=${id}`;
+    window.location.href= `/html/add/add.html?id=${id}`;
   })
 
   // 点击加号跳转到添加工单-
   $(".icon-jiahao").on('click',()=>{
-    window.location.href= "./add.html";
+    window.location.href= "/html/add/add.html";
   })
 
   // 控制svg是否显示
@@ -146,4 +146,4 @@
       ul.appendChild(li);
     });
   }
-})(Zepto);
+})(jQuery);

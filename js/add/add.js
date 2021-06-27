@@ -1,50 +1,65 @@
 (async function ($) {
-  let isLoading = false; //作为判断是否正在加载中的标记
+  renderAdd();
   const id = +getParam("id"); // +转为Number
-  // 大于0表示详情页 否则是添加页
-  if (id > 0) {
-    const res = await init(id);
-    console.log(res);
-    renderAdd(0, true, res);
-  } else {
-    alert("111")
-    renderAdd(0, false, null);
-    alert("222")
+  // 大于0表示详情页，需要根据url中的 id去请求数据
+  if (id > -5) {
+    // fetchData(id);
+    const json = {
+      type:"3",
+      name:'这里是工单名',
+      isProject:"0",
+      projectName:"这里是项目名称",
+      remark:"这里是备注信息"
+  
+    }
+    deserialize($('.form'), json)
+
+    // $('.submit').hide();
+    // $('input').attr('readonly', true);
+    // $('[type=radio]').attr("disabled", 'disabled')
+    // $("select").attr("disabled", "disabled")
+    // $('textarea').attr('readonly', true);
+
   }
 
-  // 初始化函数
-  async function init(id) {
+
+
+
+
+  async function fetchData(id) {
     // 如果id为0表示新增页；如果大于0表示详情页，需要球请求数据
-    isLoading = true; //开始请求数据的时候设置为true
-    svgShow(isLoading); //控制svg图显示与否
+    $('.svg').show();
     await delay(2000);
-    return new Promise((resolve, reject) => {
-      $.post('http://192.168.31.248:8081/fcgagents/manager/newline/show.do', {
-          id
-        },
-        function (data) {
-          data ? resolve(data) : reject(data);
-          isLoading = false; //结束后设置为false
-          svgShow(isLoading);
-        },
-      );
-    })
+    $.ajax({
+      url: 'http://192.168.31.248:8081/fcgagents/manager/newline/show.do',
+      type: 'post',
+      data: { id },
+      dataType: 'json',
+      success(data) {
+        if (data.newline) {
+          renderAdd(0, true);
+          console.log(res);
+          $('.svg').hide();
+          $(".isAddOrEdit").html("专项工单详情");
+          deserialize($('.form'), data.newline)
+        }
+      },
+      error(err) {
+        $('.svg').hide();
+        alert("请求失败:"+ err.statusText);
+      }
+    });
   }
-
 
   // 切换类型，重新渲染
   $('#type').on('change', (e) => {
     const val = e.target.value;
-    renderAdd(+val, false,null); //将val转为字符串
+    renderAdd(+val, false); //将val转为字符串
   })
   // 点击 < 回退上次链接
   $(".left").on('click', () => {
     window.history.back(-1);
   })
-  // 控制svg是否显示
-  function svgShow(isLoading) {
-    isLoading ? $('.svg').show() : $('.svg').hide();
-  }
   /** 
    * 获取指定的URL参数值 
    * URL:http://127.0.0.1:5501/add.html?id=1
@@ -66,4 +81,4 @@
     }
     return paramValue === "" && (paramValue = null), paramValue;
   }
-})(Zepto);
+})(jQuery);
