@@ -56,7 +56,6 @@
 				error(err) {
 					$('.login-btn').attr('disabled', false);
 					$('.login-btn').html("登陆");
-					console.log(err);
 					alert(`登录失败：${err.statusText}`);
 				}
 			});
