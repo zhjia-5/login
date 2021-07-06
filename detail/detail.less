@@ -1,0 +1,149 @@
+#detail {
+  position: relative;
+  color: #9f9f9f;
+  // 公共的p样式
+  .common-p {
+    display: flex;
+    padding: .2rem .2rem .2rem .8rem;
+    font-size: .7rem;
+
+    .key {
+      flex: 1 1 30%;
+    }
+
+    .value {
+      flex: 1 1 70%;
+      color: #333;
+      margin-left: .5rem;
+    }
+  }
+
+  /* 分割栏公共样式 */
+  .split-bar {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    background: linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,.06));
+    padding: 0.3rem .5rem;
+    margin: .2rem 0;
+    font-size: .8rem;
+    color: #333;
+  }
+
+  // 备注内容公共样式
+  li.remark .content,
+  #content {
+    padding: .5rem;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+  }
+
+
+  // 导航栏
+  .nav-bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2.2rem;
+    background-color: #fff;
+    color: #5f646e;
+    box-sizing: border-box;
+    padding: 0 .5rem;
+    font-size: .8rem;
+    z-index: 999;
+
+    .toggle {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #dfdfdf;
+    }
+
+    .active {
+      color: #e34d00;
+      border-bottom: 2px solid #e34d00;
+    }
+  }
+
+  .wraper {
+    display: flex;
+    position: absolute;
+    left: 0%;
+    top: 0;
+    transition: all .5s;
+    padding-top: 2.2rem;
+    padding-bottom: 3rem;
+    // 工单信息
+    ul.workInfo {
+      width: 100vw;
+
+      // 头部：展示类型圆形和工单名区
+      .head {
+        display: flex;
+        padding: .3rem;
+        box-sizing: border-box;
+        // border-bottom: 1PX solid rgb(228, 228, 228);
+        background: linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,.06));
+        // 圆样式
+        .circle {
+          flex: 0 0 2.3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          height: 2.3rem;
+          border-radius: 50%;
+          overflow: hidden;
+          padding: .2rem;
+          background: chocolate;
+          color: #fff;
+          font-weight: bold;
+          font-size: .6rem;
+        }
+
+        // 右边区
+        .right {
+          flex: 1 1 auto;
+          padding-left: .8rem;
+          padding-top: .2rem;
+          font-size: .8rem;
+
+          .workName {
+            color: #333;
+            font-size: 1rem;
+            margin-bottom: .2rem;
+          }
+        }
+      }
+
+      .company-li {
+        padding: .2rem 0;
+      }
+    }
+
+    // 工单流程
+    ul.process {
+      width: 100vw;
+      // 各环节详情头部
+      .eachDetail{
+        text-align: center;
+        padding: .3rem 0;
+        color: chocolate;
+        .shangzhan{
+          transform-origin: 10 10;
+          transform: rotate(60deg) !important;
+        }
+      }
+      .head {
+        color: #333;
+        padding: .3rem 1rem;
+        font-size: .9rem;
+        background: linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,.06));
+      }
+    }
+
+  }
+}

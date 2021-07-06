@@ -1,0 +1,62 @@
+.design {
+  overflow: hidden;
+  display: none;
+  /* 无数据 empty 区域 */
+}
+.design nav {
+  background-color: #38a1e5;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 3rem;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  z-index: 100;
+}
+.design nav .designleft {
+  margin-right: 2rem;
+  line-height: 3rem;
+  font-size: 0.8rem;
+}
+.design .content {
+  margin-top: 3rem;
+  width: 100%;
+}
+.design .content .title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.design .content .list li {
+  position: relative;
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.design .content .list li .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.design .empty {
+  display: none;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  color: #ccc;
+  padding: 0.5rem 0;
+}
+.design .empty .icon-kong {
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+}
+.design .empty p {
+  font-size: 0.8rem;
+}

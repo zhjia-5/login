@@ -1,0 +1,124 @@
+#detail {
+  position: relative;
+  color: #9f9f9f;
+  /* 分割栏公共样式 */
+}
+#detail .common-p {
+  display: flex;
+  padding: 0.2rem 0.2rem 0.2rem 0.8rem;
+  font-size: 0.7rem;
+}
+#detail .common-p .key {
+  flex: 1 1 30%;
+}
+#detail .common-p .value {
+  flex: 1 1 70%;
+  color: #333;
+  margin-left: 0.5rem;
+}
+#detail .split-bar {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.06));
+  padding: 0.3rem 0.5rem;
+  margin: 0.2rem 0;
+  font-size: 0.8rem;
+  color: #333;
+}
+#detail li.remark .content,
+#detail #content {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+#detail .nav-bar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2.2rem;
+  background-color: #fff;
+  color: #5f646e;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  z-index: 999;
+}
+#detail .nav-bar .toggle {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dfdfdf;
+}
+#detail .nav-bar .active {
+  color: #e34d00;
+  border-bottom: 2px solid #e34d00;
+}
+#detail .wraper {
+  display: flex;
+  position: absolute;
+  left: 0%;
+  top: 0;
+  transition: all 0.5s;
+  padding-top: 2.2rem;
+  padding-bottom: 3rem;
+}
+#detail .wraper ul.workInfo {
+  width: 100vw;
+}
+#detail .wraper ul.workInfo .head {
+  display: flex;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.06));
+}
+#detail .wraper ul.workInfo .head .circle {
+  flex: 0 0 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 2.3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0.2rem;
+  background: chocolate;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.6rem;
+}
+#detail .wraper ul.workInfo .head .right {
+  flex: 1 1 auto;
+  padding-left: 0.8rem;
+  padding-top: 0.2rem;
+  font-size: 0.8rem;
+}
+#detail .wraper ul.workInfo .head .right .workName {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+#detail .wraper ul.workInfo .company-li {
+  padding: 0.2rem 0;
+}
+#detail .wraper ul.process {
+  width: 100vw;
+}
+#detail .wraper ul.process .eachDetail {
+  text-align: center;
+  padding: 0.3rem 0;
+  color: chocolate;
+}
+#detail .wraper ul.process .eachDetail .shangzhan {
+  transform-origin: 10 10;
+  transform: rotate(60deg) !important;
+}
+#detail .wraper ul.process .head {
+  color: #333;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.06));
+}

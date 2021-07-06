@@ -1,0 +1,127 @@
+input::-webkit-input-placeholder{
+  font-size: .8rem;
+}
+nav{
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #38a1e5;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  box-sizing: border-box;
+  z-index: 999;
+}
+nav .left{
+  width: 2rem;
+  line-height: 3rem;
+  height: 100%;
+  font-size: .8rem;
+  text-align: center;
+}
+nav .isAddOrEdit{
+  font-size: 1rem;
+}
+nav .right{
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+}
+.icon-caozuoshezhi{
+  display: block;
+  width: 2rem;
+  height: 100%;
+  text-align: center;
+  line-height: 3rem;
+  cursor: pointer;
+}
+.iconfont{
+  font-size: 1rem;
+}
+.icon-ico_leftarrow{
+  font-size: .8rem;
+}
+/* form表单 */
+.form{
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 3rem;
+}
+.form .typeSelect{
+  display: flex;
+}
+.border-bottom{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: .3rem 0;
+  border-bottom: 1px solid #eee;
+}
+.label{
+  flex: 0 0 6rem;
+  padding-left: 1rem;
+  font-size: .8rem;
+}
+.input,.select{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  height: 2rem;
+  border: none;
+  outline: none;
+  font-size: .8rem;
+  color: inherit;
+}
+.select-btn{
+  position: absolute;
+  right: 1rem;
+  font-size: .8rem;
+  width: 3rem;
+  height: 70%;
+  border: none;
+  border-radius: .4rem;
+  color: rgb(104, 100, 100);
+}
+.margin-right5{
+  margin-right: .5rem;
+}
+.margin-right10{
+  margin-right: 2rem;
+}
+
+/* 分割栏 */
+.split-bar{
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  background: rgb(242, 242, 242);
+  padding: 0.3rem 1rem;
+  font-size: .8rem;
+}
+
+/* 非详情页的备注textarea样式 */
+.textarea{
+  width: 100%;
+  padding: .3rem;
+  padding: 0 !important;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+/* 详情页的备注textarea样式 */
+.hasRemark{
+  width: 100% !important;
+  padding: 1rem;
+  font-size: .9rem !important;
+  border-bottom: 1px solid #eee;
+}
+
+.notclick{
+  pointer-events: none;
+}

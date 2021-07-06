@@ -1,0 +1,198 @@
+.main {
+  transition: all 0.5s;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  /* form表单 */
+}
+.main nav {
+  background-color: #38a1e5;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+}
+.main nav .title {
+  font-size: 1rem;
+}
+.main nav .left {
+  width: 2rem;
+  line-height: 3rem;
+  height: 100%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.main nav .right {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+}
+.main .form {
+  width: 100%;
+  box-sizing: border-box;
+}
+.main .form #slot .split-bar {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  background: #dfdfdf;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+}
+.main .form #slot .border-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #eee;
+  /* 非详情页的备注textarea样式 */
+}
+.main .form #slot .border-bottom .label {
+  flex: 0 0 30%;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+}
+.main .form #slot .border-bottom .select-btn {
+  position: absolute;
+  right: 0.3rem;
+  font-size: 0.8rem;
+  width: 3rem;
+  height: 70%;
+  border: none;
+  border-radius: 0.3rem;
+}
+.main .form #slot .border-bottom .input,
+.main .form #slot .border-bottom .select {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  height: 2rem;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+  color: inherit;
+}
+.main .form #slot .border-bottom .input .margin-right5,
+.main .form #slot .border-bottom .select .margin-right5 {
+  margin-right: 0.5rem;
+}
+.main .form #slot .border-bottom .input .margin-right10,
+.main .form #slot .border-bottom .select .margin-right10 {
+  margin-right: 2rem;
+}
+.main .form #slot .border-bottom .textarea {
+  width: 100%;
+  padding: 0.3rem;
+  padding: 0 !important;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+.nextPerson,
+.buildComp,
+.supervisionComp {
+  transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.nextPerson nav,
+.buildComp nav,
+.supervisionComp nav {
+  background-color: #38a1e5;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  z-index: 999;
+}
+.nextPerson nav .title,
+.buildComp nav .title,
+.supervisionComp nav .title {
+  font-size: 1rem;
+}
+.nextPerson nav .left,
+.buildComp nav .left,
+.supervisionComp nav .left {
+  width: 2rem;
+  line-height: 3rem;
+  height: 100%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.nextPerson nav .right,
+.buildComp nav .right,
+.supervisionComp nav .right {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+}
+.nextPerson .content .title,
+.buildComp .content .title,
+.supervisionComp .content .title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #ccc;
+}
+.nextPerson .content .list li,
+.buildComp .content .list li,
+.supervisionComp .content .list li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  margin-top: 0.1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.nextPerson .content .list .mask,
+.buildComp .content .list .mask,
+.supervisionComp .content .list .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.nextPerson {
+  left: 100%;
+}
+.buildComp,
+.supervisionComp {
+  left: -100%;
+}
+.svg {
+  padding: 1rem 0;
+  display: none;
+  text-align: center;
+}
+/* 无数据 empty 区域 */
+.empty {
+  display: none;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  color: #ccc;
+  padding: 0.5rem 0;
+}
+.empty .icon-kong {
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+}
+.empty p {
+  font-size: 0.8rem;
+}

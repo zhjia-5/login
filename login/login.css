@@ -1,0 +1,122 @@
+.login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+}
+
+.login-logo {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.login-logo img {
+    margin-top: 2rem;
+    width: 4rem;
+    height: auto;
+}
+
+.form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form select,
+.username,
+.password {
+    text-indent: 1.5rem;
+    height: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, .04);
+    border-color: rgba(0, 0, 0, .06);
+    border-radius: 3px;
+    display: inline-block;
+    box-sizing: border-box;
+    outline-color: skyblue;
+    font-size: .8rem;
+}
+
+.form select {
+    font-size: .8rem;
+}
+
+.login .form .iconfont {
+    line-height: 2rem;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .6);
+    position: absolute;
+    left: .2rem;
+    bottom: 0;
+}
+
+.gongsi,
+.input {
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    height: 2rem;
+}
+
+.footer #remeber {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: .2rem;
+}
+
+.footer label {
+    font-size: .8rem;
+}
+
+.footer .login-btn {
+    width: 7rem;
+    height: 100%;
+    border-radius: 3px;
+    margin-left: auto;
+    background: skyblue;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    letter-spacing: .2rem;
+    text-indent: 0;
+}
+
+.footer .login-btn:active {
+    transform: scale(.98);
+}
+
+.uname-err {
+    color: red;
+    font-size: .7rem;
+    display: none;
+}
+.psd-err {
+    color: red;
+    font-size: .7rem;
+    display: none;
+}
+
+
+
+/* 红色警告框样式 */
+
+.redBorder {
+    border: 1px solid red;
+}
+
+@media only screen and (min-width:1000px) {
+    .login {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 50%;
+    }
+}

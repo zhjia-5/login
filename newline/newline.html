@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>newline</title>
+  <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2625117_0q3un1b754s.css">
+  <link rel="stylesheet" href="../public/message.css">
+  <link rel="stylesheet" href="../public/public.css">
+  <link rel="stylesheet" href="./newline.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- 头部搜索区域 -->
+    <div class="head">
+      <div class="search">   
+        <i class="iconfont icon-sousuo"></i>
+        <input class="search-input" type="text" placeholder="请输入工单名...">
+        <i class="iconfont icon-cuowu"></i>
+      </div>
+      <button class="search-btn">搜 索</button>
+      <a class="add" href="../add/add.html"><i class="iconfont icon-jiahao"></i></a>
+    </div>
+    <!-- 内容列表区 -->
+    <div class="content">
+      <ul class="list">
+
+        <!-- <li>
+          <div class="top">
+            <div class="circle" style="background:rgb(115, 173, 7)">互联网+IMS</div>
+            <div class="right">
+              <h4 >工单名：这里是工单名</h4>
+              <div class="design">
+                <p>所属设计院：<span>建委公司</span></p>
+              </div>
+              <div class="construction">
+                <p >区域：<span>防城区</span></p>
+                <p >当前处理人：<span>张某某</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <p><i class="iconfont icon-gouxuan"></i>仓城区</p>
+            <p class="status">状态：<span>审计</span></p>
+          </div>
+          <div class="mask" data-id=${item.id}></div>
+        </li>
+       -->
+
+      </ul>
+    </div>
+    <!-- 用于显示没有数据 -->
+    <div class="empty">
+      <i class="iconfont icon-kong"></i>
+      <p>无数据</p>
+    </div>
+    <!-- svg 加载图 -->
+    <div class="svg" style="display: none; text-align: center; margin-top: 1rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve">
+        <path fill="#409eff" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z" transform="rotate(275.098 25 25)">
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur=".8s" repeatCount="indefinite"></animateTransform>
+        </path>
+    </svg>
+    </div>
+  </div>
+  <script src="../public/jquery-3.5.1.min.js"></script>
+  <script src="../public/message.js"></script>
+  <script src="../public/storage.js"></script>
+  <script src="../public/delay.js"></script>
+  <script src="./newline.js"></script>
+</body>
+</html>
+

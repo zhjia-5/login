@@ -1,0 +1,212 @@
+
+.main {
+  transition: all .5s;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+
+  nav {
+    background-color: #38a1e5;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+
+    .title {
+      font-size: 1rem;
+    }
+
+    .left {
+      width: 2rem;
+      line-height: 3rem;
+      height: 100%;
+      font-size: .8rem;
+      text-align: center;
+    }
+
+    .right {
+      display: flex;
+      padding: 0 1rem;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      font-size: 1.5rem;
+    }
+  }
+
+  /* form表单 */
+  .form {
+    width: 100%;
+    box-sizing: border-box;
+    // ul 列表插槽
+    #slot {
+      .split-bar {
+        display: flex;
+        align-items: center;
+        height: 1rem;
+        background: #dfdfdf;
+        padding: 0.3rem 1rem;
+        font-size: .8rem;
+      }
+
+      // 每个li样式
+      .border-bottom {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: .3rem 0;
+        border-bottom: 1px solid #eee;
+
+        .label {
+          flex: 0 0 30%;
+          padding-left: 1rem;
+          font-size: .8rem;
+        }
+
+        // 选择按钮
+        .select-btn {
+          position: absolute;
+          right: .3rem;
+          font-size: .8rem;
+          width: 3rem;
+          height: 70%;
+          border: none;
+          border-radius: .3rem;
+        }
+
+        .input,
+        .select {
+          box-sizing: border-box;
+          display: flex;
+          flex: 1 1 auto;
+          align-items: center;
+          height: 2rem;
+          border: none;
+          outline: none;
+          font-size: .8rem;
+          color: inherit;
+
+          .margin-right5 {
+            margin-right: .5rem;
+          }
+
+          .margin-right10 {
+            margin-right: 2rem;
+          }
+
+        }
+
+        /* 非详情页的备注textarea样式 */
+        .textarea {
+          width: 100%;
+          padding: .3rem;
+          padding: 0 !important;
+          font-size: 1rem;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+
+  }
+}
+
+// 下一不处理人模块left  施工单位   监理单位公共样式
+.nextPerson,.buildComp,.supervisionComp  {
+  transition: all .5s;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  nav {
+    background-color: #38a1e5;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    z-index: 999;
+    .title {
+      font-size: 1rem;
+    }
+
+    .left {
+      width: 2rem;
+      line-height: 3rem;
+      height: 100%;
+      font-size: .8rem;
+      text-align: center;
+    }
+
+    .right {
+      display: flex;
+      padding: 0 1rem;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      font-size: 1.5rem;
+    }
+  }
+  .content {
+    .title {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      padding: .8rem;
+      background-color: rgba(0, 0, 0, .05);
+      border-bottom: 1px solid #ccc;
+    }
+    .list {
+      li {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: .8rem;
+        margin-top: .1rem;
+        border-bottom: 1px solid #ccc;
+        background-color: rgba(0, 0, 0, .05);
+      }
+      .mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+      }
+    }
+  }
+}
+// 下一不处理人模块
+.nextPerson{
+  left: 100%;
+}
+// 施工单位模块    监理单位模块
+.buildComp,.supervisionComp {
+  left: -100%;
+}
+
+
+  .svg{
+    display: none;
+    padding: 1rem 0;
+    display: none;
+    text-align: center;
+  }
+  /* 无数据 empty 区域 */
+  .empty {
+    display: none;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    color: #ccc;
+    padding: .5rem 0;
+    .icon-kong {
+      line-height: 1.5rem;
+      font-size:1.5rem;
+    }
+    p{
+      font-size: .8rem;
+    }
+  }

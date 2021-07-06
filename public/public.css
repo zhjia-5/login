@@ -1,0 +1,101 @@
+﻿h1,
+h2,
+h3,
+h4,
+h5,
+th,
+td,
+p{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 20px;
+}
+:root{
+  overflow-x: hidden;
+}
+body,
+html {
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+nav{
+  display: block;/* 兼容性处理 */
+}
+/* 单选框的样式 */
+input[type='radio']{
+  width: .8rem;
+  height: .8rem;
+}
+textarea{
+  text-indent: 1rem;
+}
+
+ul,li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* input:-webkit-autofill { */
+  /* -webkit-box-shadow: 0 0 0px 32px #fff inset; *通过边框阴影遮挡住背景 */
+  /* -webkit-text-fill-color: rgba(0, 0, 0, .1); 自动填充内容的文本颜色 */
+/* } */
+
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+
+.submitWraper{
+  text-align: center;
+}
+/* 提交按钮 */
+.submit{
+  background: #38a1e5;
+  width: 80%;
+  height: 2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: .2rem;
+  margin-top:1rem;
+  margin-bottom: 3rem;
+}
+.submit:active{
+  transform: scale(.98);
+}
+
+
+@media only screen and (min-width:400px) {
+  html {
+    font-size: 21.33px !important
+  }
+}
+
+@media only screen and (min-width:414px) {
+  html {
+    font-size: 22.08px !important
+  }
+}
+
+@media only screen and (min-width:480px) {
+  html {
+    font-size: 25.6px !important
+  }
+}
