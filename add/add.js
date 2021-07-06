@@ -15,23 +15,23 @@
 
 
   // 状态 为1才是修改 
-  if (state === 1) {
-    $(".isAddOrEdit").html("工单修改");
-    $('.submitWraper').hide();
-    const res = await fetchDetail(id, 1);
-    if (res.newline) {
-      let type = res.newline.type;
-      newline = res.newline;
-      renderAdd(type);
-      $('.svg').hide();
-      deserialize($('.form'), newline);
-      $('.submitWraper').show();
-    } else {
-      alert("无数据");
-    }
-  } else {
+  // if (state === 1) {
+  //   $(".isAddOrEdit").html("工单修改");
+  //   $('.submitWraper').hide();
+  //   const res = await fetchDetail(id, 1);
+  //   if (res.newline) {
+  //     let type = res.newline.type;
+  //     newline = res.newline;
+  //     renderAdd(type);
+  //     $('.svg').hide();
+  //     deserialize($('.form'), newline);
+  //     $('.submitWraper').show();
+  //   } else {
+  //     alert("无数据");
+  //   }
+  // } else {
     renderAdd();
-  }
+  // }
   // 提交添加 和 提交修改
   $('.form').submit(function () {
     const arr = $(this).serializeArray();
